@@ -6,7 +6,7 @@
 //Think of it as: Form → Auth → Upload → Save → Send back
 
 import complaint from "../models/complaint.js";
-import complaint from "../models/complaint.js";
+
 
 export const createComplaint = async(req, res) => {
     const complaint = await complaint.create({
