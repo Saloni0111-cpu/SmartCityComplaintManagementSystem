@@ -8,13 +8,13 @@
 import express from "express";
 import upload from "../middlewares/uploadMiddleware.js";
 import auth from "../middlewares/authMiddleware.js";;
-import { createComplaint, getComplaint } from "../controllers/complaintController.js";
+import { createComplaint, getComplaints } from "../controllers/complaintController.js";
 
 
 
 const router = express.Router();
 
 router.post("/", auth, upload.single("image"), createComplaint);
-router.get("/", auth, getComplaint);
+router.get("/", auth, getComplaints);
 
 export default router;
