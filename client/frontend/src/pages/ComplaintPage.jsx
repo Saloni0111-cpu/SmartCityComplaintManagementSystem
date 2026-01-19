@@ -185,7 +185,7 @@ const ComplaintPage = () => {
                               <td>
                                 {complaint.image ? (
                                   <a
-                                    href={`http://localhost:5000/${complaint.image}`}
+                                    href={`http://localhost:5000/uploads/${complaint.image}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn btn-sm btn-outline-secondary"
