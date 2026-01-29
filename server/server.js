@@ -6,6 +6,8 @@ import dashboardRoutes from "./routes/dashboard.js";
 import connectDb from './config/db.js';
 import authRoutes from "./routes/authRoutes.js"
 import complaintRoutes from "./routes/complaintRoutes.js";
+import departmentRoutes from "./routes/departmentRoutes.js"
+
 
 dotenv.config();
 connectDb();
@@ -20,6 +22,7 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api/auth", authRoutes);
 app.use("/api/complaints", complaintRoutes);
 app.use("/api/dashboard", dashboardRoutes)
+app.use("/api/departments", departmentRoutes)
 app.get("/", (req, res) => {
     res.send("Backend Running");
 })
